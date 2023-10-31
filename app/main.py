@@ -10,7 +10,7 @@ from .config import Setting
 
 
 # เอาไว้ generate table โดยไม่มี alembic 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 #  uvicorn app.main:app --reload
 app = FastAPI(
