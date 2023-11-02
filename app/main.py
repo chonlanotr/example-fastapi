@@ -60,7 +60,7 @@ app.include_router(vote.router)
 # request Get method url: "/"
 @app.get("/")
 async def root():
-    return {"message": "Hello World - update again"}
+    return {"message": "Hello World - Git Pull TEST"}
 
 
 # @app.get("/sqlalchemy")
