@@ -6,11 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from .database import engine
 from .routers import post, user, auth, vote
-from .config import Setting
+from .config import Settings
 
 
 # เอาไว้ generate table โดยไม่มี alembic 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 #  uvicorn app.main:app --reload
 app = FastAPI(
