@@ -77,10 +77,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
+    environment:
+      name: production
     steps:
       - name: pulling get repo
         uses: actions/checkout@v4
-        
+
       - name: deploying to heroku
         uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
         with:
