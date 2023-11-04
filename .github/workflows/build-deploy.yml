@@ -99,8 +99,8 @@ jobs:
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.PROD_HOST }}
-          username: ${{ secrets.PROD_USERNAME }}
-          password: ${{ secrets.PROD_PASSWORD }}
+          username: ${{ secrets.PROD_USERNAME }} #ใช้ user apiservice
+          password: ${{ secrets.PROD_PASSWORD }} #ใช้ password ดูใน onenote
           # port: $ {{ secrets.PROD_PORT }}
           script: |
             cd app/src
