@@ -15,7 +15,7 @@ jobs:
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
-    runs-on: self-hosted
+    runs-on: ubuntu-cicd
     steps:
       - name: pulling get repo
         uses: actions/checkout@v4
