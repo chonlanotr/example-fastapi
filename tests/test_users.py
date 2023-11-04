@@ -5,17 +5,17 @@ from app.config import setting
 
 
 
-def test_root(client):
+# def test_root(client):
 
-# ทำแบบนี้ทำให้สามารถ access เข้า DB ได้ในตอน TEST เช่น
-# def test_root(client, session):
-#     session.query(models.P....)
+# # ทำแบบนี้ทำให้สามารถ access เข้า DB ได้ในตอน TEST เช่น
+# # def test_root(client, session):
+# #     session.query(models.P....)
 
 
 
-    # res = client.get("/")
-    # assert res.json().get('message') == 'Hello World successfully deployed from CI/CD pipeline.'
-    # assert res.status_code == 200
+#     res = client.get("/")
+#     assert res.json().get('message') == 'Hello World successfully deployed from CI/CD pipeline.'
+#     assert res.status_code == 200
 
 
 def test_create_user(client):
