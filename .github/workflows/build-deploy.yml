@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   job1:
-    runs-on: ubuntu-lastest
+    runs-on: self-hosted
     steps:
       - name: pulling get repo
         uses: actions/checkout@v4
