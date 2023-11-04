@@ -76,7 +76,7 @@ def client(session):
 
 @pytest.fixture
 def test_user(client):
-     user_data = {"email": "user5@example.com", "password": "string"}
+     user_data = {"email": "user1@example.com", "password": "string"}
      res = client.post("/users/", json=user_data)
 
      assert res.status_code == 201
@@ -87,7 +87,7 @@ def test_user(client):
 
 @pytest.fixture
 def test_user2(client):
-     user_data = {"email": "user50@example.com", "password": "string"}
+     user_data = {"email": "user2@example.com", "password": "string"}
      res = client.post("/users/", json=user_data)
 
      assert res.status_code == 201
@@ -99,10 +99,12 @@ def test_user2(client):
 
 @pytest.fixture
 def token(test_user):
+    # print(f"token-test_user: {test_user['id']}")
     return create_access_token({"user_id": test_user['id']})
 
 @pytest.fixture
 def authorized_client(client, token):
+    # print(f"authorized_client-bearer: {token}")
     client.headers = {
         **client.headers,
         "Authorization" : f"Bearer {token}"
