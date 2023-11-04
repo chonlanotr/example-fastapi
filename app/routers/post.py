@@ -152,7 +152,7 @@ def update_post(id: int, updated_post: schemas.PostCreate,  db: Session = Depend
     # ORM
     post_query =    db.query(models.Post).filter(models.Post.id == id)
     post = post_query.first()
-    print(post.owner_id)
+    # print(post.owner_id)
     print(current_user.id)
     if post == None:
     # if updated_post == None:
