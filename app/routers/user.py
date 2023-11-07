@@ -22,7 +22,6 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     db.commit()
     # เท่ากับ RETURNING ของ SQL Pattern
     db.refresh(new_user)
-
     return new_user
 
 @router.get("/{id}", response_model=schemas.UserOut)
