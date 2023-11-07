@@ -13,6 +13,7 @@ class UserOut(BaseModel):
     id: int
     email: EmailStr
     created_at: datetime
+    phone_number: Optional[str] 
 
 class UserLogin(BaseModel):
     email: EmailStr
