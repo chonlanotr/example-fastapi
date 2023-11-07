@@ -5,6 +5,7 @@ from typing import Optional
 from pydantic.types import conint
 
 
+
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
